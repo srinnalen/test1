@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    .container{
+        width: 430px;
+        /* height: 500px; */
+        background-color: rgb(249, 251, 251);
+        padding: 50px;
+        margin-top: 30px;
+        height: 300px;
+        box-shadow: 1px 1px 5px gray;
+        border-radius: 3px;
+        padding: 50px 20px;
+        background-color: pink;
+     
+    }
+    .box{
+        width: 100%;
+        padding: 30px 40px;
+    }
+    button{
+        margin-top: 100px;
+        margin: auto;
+        margin-left: 30px;
+
+    }
+    .move{
+        margin-left: 80px;
+        transition: .3s;
+
+    }
+    .no{
+        transition: .3s;
+
+    }
+    h1{
+        font-size: 25px;
+        margin-left: 30px;
+    }
+</style>
+<body>
+    <div class="container">
+           <h1>អ្នកបោកកូនគេមែនទេ? &#128512;</h1>
+        <div class="box" >
+            <button class="btn btn-primary yes">YES</button>
+            <button class="btn btn-danger no">NO</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.yes').click(function(){
+            $('h1').html('ហេតអ្វីបានអ្នកបោកគេចឹង?&#128545;');
+        })
+        $('.no').mouseover(function(){
+            $(this).toggleClass('move')
+        })
+    })
+</script>
+</html>
